@@ -25,9 +25,14 @@
         {
             var text = document.getElementById("text").value;
             var mot= text.toLowerCase(); 
+            var taille= mot.length;
             reverse_mot = mot.split("").reverse().join("");
                     if(mot==reverse_mot){
-                        alert("C'est un palindrome!");
+                        if(taille==0){
+                            alert("Veuller saisir un mot!");
+                        }
+                        else{alert("C'est un palindrome!");}
+                        
                     }
                     else{
                         alert("Ce n'est pas un palindrome!");
