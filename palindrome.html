@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Palindrome</title>
+    <style>
+    input{
+       width:200px;
+       height: 30px;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <form action="">
+     <strong> Entrer un mot:</strong>  <input type="text" id="text" class="text" value="">
+     <input type="submit" onClick="pal();" />
+    </form>
+
+    <script>
+   function pal()
+        {
+            var text = document.getElementById("text").value;
+            var mot= text.toLowerCase(); 
+            reverse_mot = mot.split("").reverse().join("");
+                    if(mot==reverse_mot){
+                        alert("C'est un palindrome!");
+                    }
+                    else{
+                        alert("Ce n'est pas un palindrome!");
+                    }
+        }     
+    </script>
+</body>
+</html>
